@@ -1,0 +1,12 @@
+services:
+  db:
+    image: postgres:latest
+    container_name: grules-db
+    environment:
+      POSTGRES_USER: "grules"
+      POSTGRES_PASSWORD: "grules"
+      POSTGRES_DB: 'grules'
+    volumes:
+      - /docker/postgres/data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
